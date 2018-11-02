@@ -1,8 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1">
-	<!-- TODO Add Nodes -->
+<AnchorPane mouseTransparent="true" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane layoutX="8.0" prefHeight="600.0" prefWidth="600.0" styleClass="fondo" stylesheets="@TypeText.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <Pane focusTraversable="true" layoutX="150.0" layoutY="100.0" prefHeight="400.0" prefWidth="300.0" style="-fx-background-color: #ffff; -fx-background-radius: 15;">
+         <children>
+            <ImageView fitHeight="125.0" fitWidth="151.0" layoutX="74.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" />
+            <Label layoutX="105.0" layoutY="132.0" styleClass="sign_in" stylesheets="@TypeText.css" text="Sign in" />
+            <VBox layoutX="14.0" layoutY="200.0" spacing="2.0">
+               <children>
+                  <Label prefHeight="25.0" styleClass="text_username" stylesheets="@TypeText.css" text="Username" textFill="GREY">
+                     <font>
+                        <Font name="Gisha" size="15.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField />
+                  <Label prefHeight="25.0" prefWidth="75.0" styleClass="text_username" stylesheets="@TypeText.css" text="Password" textFill="GREY">
+                     <font>
+                        <Font name="Gisha" size="15.0" />
+                     </font>
+                  </Label>
+                  <JFXPasswordField prefHeight="25.0" prefWidth="273.0" />
+               </children>
+            </VBox>
+            <JFXButton buttonType="RAISED" layoutX="14.0" layoutY="325.0" prefHeight="25.0" prefWidth="273.0" style="-fx-background-radius: 8; -fx-background-color: red;" text="Get started" textFill="WHITE">
+               <font>
+                  <Font name="Gisha" size="15.0" />
+               </font>
+            </JFXButton>
+            <Label layoutX="14.0" layoutY="176.0" styleClass="text_username" stylesheets="@TypeText.css" text="Hello there, start you manage" />
+            <Label layoutX="14.0" layoutY="369.0" styleClass="text_username" stylesheets="@TypeText.css" text="Forgot password? create a new account" />
+         </children>
+      </Pane>
+   </children>
 </AnchorPane>
-

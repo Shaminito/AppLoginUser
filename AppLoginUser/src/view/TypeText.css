@@ -1,0 +1,20 @@
+
+.fondo {
+	-fx-background-color: gray;
+}
+
+.fondo_login {
+	-fx-background-color: white;
+}
+
+.sign_in {
+	-fx-text-fill: blue;
+	-fx-font-family: Gisha;
+	-fx-font-size: 30;
+}
+
+.text_username{
+	-fx-text-fill: gray;
+	-fx-font-family: Gisha;
+	-fx-font-size: 15;
+}
