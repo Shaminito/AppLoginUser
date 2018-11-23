@@ -1,20 +1,28 @@
 
 .fondo {
-	-fx-background-color: gray;
+	-fx-background-color: linear-gradient(#2A5058, #ffa2b1);
 }
 
 .fondo_login {
 	-fx-background-color: white;
+	-fx-background-radius: 10;
 }
 
 .sign_in {
-	-fx-text-fill: blue;
-	-fx-font-family: Gisha;
-	-fx-font-size: 30;
+	-fx-font-family: system;
+	-fx-text-fill: #004ECD;
+	-fx-font-size: 28;
 }
 
-.text_username{
-	-fx-text-fill: gray;
-	-fx-font-family: Gisha;
-	-fx-font-size: 15;
+.presentasion {
+	-fx-font-family: system;
+	-fx-text-fill: #B2B2B2;
+	-fx-font-size: 11;
+}
+
+.boton {
+	-fx-font-family: system;
+	-fx-font-size: 12;
+	-fx-background-color: red; 
+	-fx-background-radius: 5;
 }

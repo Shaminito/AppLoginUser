@@ -3,52 +3,58 @@
 <?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXPasswordField?>
 <?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.CMainApp">
+<AnchorPane prefHeight="500.0" prefWidth="500.0" styleClass="fondo" stylesheets="@TypeText.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.CMainApp">
    <children>
-      <Pane focusTraversable="true" layoutX="150.0" layoutY="100.0" prefHeight="400.0" prefWidth="300.0" style="-fx-background-color: #ffff; -fx-background-radius: 15;">
+      <GridPane prefHeight="600.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" />
+            <ColumnConstraints hgrow="SOMETIMES" />
+          <ColumnConstraints hgrow="SOMETIMES" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+        </rowConstraints>
          <children>
-            <ImageView fitHeight="125.0" fitWidth="151.0" layoutX="88.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" rotate="10.0">
-               <image>
-                  <Image url="@../../resource/image/LOGO.jpg" />
-               </image></ImageView>
-            <Label layoutX="105.0" layoutY="132.0" styleClass="sign_in" stylesheets="@TypeText.css" text="Sign in" />
-            <VBox layoutX="14.0" layoutY="200.0" spacing="2.0">
+            <VBox alignment="CENTER" prefHeight="100.0" prefWidth="120.0" spacing="20.0" styleClass="fondo_login" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <children>
-                  <Label prefHeight="25.0" styleClass="text_username" stylesheets="@TypeText.css" text="Username" textFill="GREY">
+                  <ImageView fitHeight="150.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../resource/image/LOGO.jpg" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+                  <Label styleClass="sign_in" stylesheets="@TypeText.css" text="Sign in" />
+                  <Label styleClass="presentasion" stylesheets="@TypeText.css" text="Hello there , start your app to manage your store" />
+                  <JFXTextField focusColor="RED" labelFloat="true" promptText="Username" />
+                  <JFXPasswordField focusColor="RED" labelFloat="true" prefHeight="25.0" prefWidth="273.0" promptText="Password" />
+                  <JFXButton fx:id="button" buttonType="RAISED" defaultButton="true" onAction="#c_btnLogin" prefHeight="29.0" prefWidth="278.0" ripplerFill="WHITE" styleClass="boton" text="Get Started" textFill="WHITE">
                      <font>
                         <Font name="Gisha" size="15.0" />
                      </font>
-                  </Label>
-                  <JFXTextField />
-                  <Label prefHeight="25.0" prefWidth="75.0" styleClass="text_username" stylesheets="@TypeText.css" text="Password" textFill="GREY">
-                     <font>
-                        <Font name="Gisha" size="15.0" />
-                     </font>
-                  </Label>
-                  <JFXPasswordField prefHeight="25.0" prefWidth="273.0" />
+                  </JFXButton>
+                  <Label styleClass="presentasion" stylesheets="@TypeText.css" text="Forgot password? create a new account" />
                </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
             </VBox>
-            <JFXButton fx:id="button" buttonType="RAISED" defaultButton="true" layoutX="14.0" layoutY="325.0" onAction="#c_btnLogin" prefHeight="25.0" prefWidth="273.0" style="-fx-background-radius: 8; -fx-background-color: red;" text="Get started" textFill="WHITE">
-               <font>
-                  <Font name="Gisha" size="15.0" />
-               </font>
-            </JFXButton>
-            <Label layoutX="14.0" layoutY="176.0" styleClass="text_username" stylesheets="@TypeText.css" text="Hello there, start you manage" />
-            <Label layoutX="14.0" layoutY="369.0" styleClass="text_username" stylesheets="@TypeText.css" text="Forgot password? create a new account" />
          </children>
-         <effect>
-            <DropShadow color="#00000078" />
-         </effect>
-      </Pane>
-      <AnchorPane fx:id="ocapacity" prefHeight="600.0" prefWidth="600.0" style="-fx-background-color: #000000;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      </GridPane>
    </children>
 </AnchorPane>
